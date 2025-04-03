@@ -48,6 +48,30 @@ By combining **wet-weather metrics** and **real-time forecasts** for a potential
    - **Color-coded** by team; **lower bars** indicate stronger performance  
    - Reflects **rain adjustments** and **wet driver scores**
 
+## Results
+
+The model predicts a podium of:
+
+1. 🥇 **Charles Leclerc** (Ferrari)  
+2. 🥈 **Max Verstappen** (Red Bull Racing)  
+3. 🥉 **Carlos Sainz Jr.** (Williams)
+
+The full prediction includes expected finishing positions for all 20 drivers competing in the **2025 Japanese Grand Prix (Suzuka)**, factoring in:
+
+- ✅ **Real-time weather forecast** retrieved via [OpenWeatherMap API](https://openweathermap.org/api)  
+- ✅ **Wet Driver Scores** calculated from comparative analysis of **2022 (dry)** and **2023 (wet)** Canadian GPs using [FastF1](https://theoehrly.github.io/Fast-F1/)  
+- ✅ **Driver experience**, **team changes**, and **team performance metrics**  
+- ✅ **Machine learning model** trained with weighted historical data (2022–2024)
+
+---
+
+### References
+
+- 🔗 [FastF1 - Formula 1 Telemetry & Data API](https://theoehrly.github.io/Fast-F1/)  
+- 🔗 [OpenWeatherMap - Weather API for Real-Time Forecasts](https://openweathermap.org/api)  
+- 🔗 [Formula 1 Official Website](https://www.formula1.com/)  
+- 🔗 [Scikit-learn Documentation](https://scikit-learn.org/stable/)  
+
 ---
 
 With **wet-weather metrics**, **team updates**, and **real-time weather data**, this model delivers a more **realistic** forecast for the **2025 Japanese Grand Prix**. Feel free to explore or enhance the project by adding new features, experimenting with other ML algorithms, or extending the weather forecast horizon!  
