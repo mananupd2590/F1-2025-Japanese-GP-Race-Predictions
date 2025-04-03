@@ -1,53 +1,53 @@
-# F1-2025-Japanese-GP-Race-Predictions
-This project is a proof-of-concept that combines F1 racing, weather data, and machine learning to generate predictive insights, and it’s a great demonstration of data engineering and business analytics skills in a dynamic, real-world domain.  Feel free to explore, contribute, and modify this project for your own use cases or further research!
+# F1 Japanese Grand Prix 2025 Prediction Model
 
-Below is an example of a README.md file in proper format for your GitHub repository:
+A **machine-learning–based prediction system** for forecasting Formula 1 race results for the **2025 Japanese Grand Prix at Suzuka**, using **historical F1 data**, **wet-weather performance** analysis, and **OpenWeatherMap** forecasts to account for rainy conditions.
 
-F1-Race-Outcome-Predictor
+## Project Overview
 
-Overview
+This project leverages **historical Formula 1 data** from the **2022–2024** seasons to build a **predictive model** that forecasts finishing positions for the **2025 Japanese Grand Prix**. The model incorporates:
 
-F1-Race-Outcome-Predictor is a machine learning project that predicts Formula 1 race outcomes by integrating historical race data from FastF1, wet-weather performance analysis, and weather forecast data from the OpenWeatherMap API. This project is tailored for data and business analytics, providing actionable insights for predicting upcoming races such as the Japanese GP at Suzuka.
+- **Historical driver performance**  
+- **Wet-driver analysis** (Canadian GP dry vs. rain)  
+- **Weather data** (rain probability, temperature, humidity)  
+- **Circuit-specific performance patterns**  
+- **Team changes for 2025** (e.g., Hamilton moving to Ferrari)  
+- **Rookie driver integration** (via fallback or synthetic data)
 
-Features
-	•	Historical Data Collection: Uses FastF1 to fetch historical race results (e.g., grid positions, finishing positions, driver experience) from multiple seasons.
-	•	Wet Performance Analysis: Computes a wet driver score by comparing driver performances in the Canadian GP under dry and wet conditions.
-	•	Weather Integration: Fetches weather forecasts (rain probability, temperature, humidity) from OpenWeatherMap to adjust predictions based on race-day conditions.
-	•	Machine Learning Model: Trains a weighted RandomForestRegressor model (giving more weight to recent races) to predict finishing positions.
-	•	Visualization: Generates charts to display predicted race outcomes for further analysis.
+By combining **wet-weather metrics** and **real-time forecasts** for a potentially **rainy** Suzuka GP, this system produces more **accurate** predictions than a standard dry-weather model.
 
-Installation
-	1.	Clone the Repository:
+## Key Features
 
-git clone https://github.com/yourusername/F1-Race-Outcome-Predictor.git
-cd F1-Race-Outcome-Predictor
+1. **Data Collection**  
+   - Automated fetching of **historical F1 race data** (2022–2024) using **FastF1**  
+   - **Team reassignments** and **rookie additions** accounted for with fallback data  
+   - Driver **experience** factors and **sample weighting** for recent races
 
+2. **Wet-Driver Analysis**  
+   - **Canadian GP Comparison**: Evaluates driver performance under **dry (2022)** vs. **wet (2023)** conditions  
+   - Computes a **Wet Driver Score** to reflect each driver’s **rain performance** advantage or disadvantage
 
-	2.	Install Dependencies:
+3. **Weather Integration**  
+   - **OpenWeatherMap** API call for **rain probability**, **temperature**, and **humidity** at Suzuka on **April 6, 2025 (14:00)**  
+   - Dynamically adjusts predictions if **rain_probability** is above a threshold
 
-pip install fastf1 pandas numpy scikit-learn matplotlib seaborn requests
+4. **Random Forest Model**  
+   - **Weighted sample data** for more recent races (2024 > 2023 > 2022)  
+   - Incorporates **Wet Driver Score** and **weather features** to refine finishing position predictions  
+   - **Fallback logic** when certain data is incomplete (e.g., synthetic race results)
 
+## Visualizations
 
-	3.	Configure API Key:
-Replace "YOUR_OPENWEATHERMAP_API_KEY" in the code with your actual OpenWeatherMap API key.
+1. **Grid Position vs Predicted Finish**  
+   **File:** `grid_vs_finish.png`  
+   - Plots each driver’s **starting grid** against **expected finishing position**  
+   - Diagonal line indicates perfect parity between start and finish; deviations highlight **wet-performance** influence
 
-Usage
-	1.	Run the Script:
-Execute the main script to fetch data, train the model, and generate predictions:
+2. **Driver Performance Ranking**  
+   **File:** `japanese_gp_prediction.png`  
+   - Bar chart displaying **predicted finishing positions** for each driver  
+   - **Color-coded** by team; **lower bars** indicate stronger performance  
+   - Reflects **rain adjustments** and **wet driver scores**
 
-python your_script_name.py
+---
 
-
-	2.	Review Output:
-	•	The script prints weather forecasts, wet driver scores, and predicted finishing positions.
-	•	Visualizations (bar charts, scatter plots) are saved as PNG files in the project directory.
-
-Contributing
-
-Contributions, bug reports, and feature requests are welcome. Please open an issue or submit a pull request for any improvements.
-
-License
-
-This project is licensed under the MIT License.
-
-Feel free to modify the content as needed to match your project specifics and personal preferences.
+With **wet-weather metrics**, **team updates**, and **real-time weather data**, this model delivers a more **realistic** forecast for the **2025 Japanese Grand Prix**. Feel free to explore or enhance the project by adding new features, experimenting with other ML algorithms, or extending the weather forecast horizon!  
