@@ -9,7 +9,7 @@ import fastf1
 
 cache_dir = 'cache'
 
-# Automatically create the directory if it doesn't exist
+# Automatically create the directory if it doesn't exist yet
 if not os.path.exists(cache_dir):
     os.makedirs(cache_dir)
 
