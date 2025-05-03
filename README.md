@@ -8,7 +8,15 @@
 ## 📌 Project Overview
 
 This project leverages data from the **2022–2024 F1 seasons** to predict driver performance for the 2025 Japanese GP at Suzuka.
+## 🗺️ Suzuka Circuit – Japan Grand Prix Track Map
 
+![Suzuka Track Map](https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit)
+
+The Suzuka International Racing Course is known for:
+- A unique **figure-eight layout**
+- Fast **"S" curves and 130R corner**
+- Being one of the most rain-affected tracks on the calendar  
+This track map is essential to understanding the model’s emphasis on **wet-weather driver advantage** and tire strategy under changing conditions.
 It accounts for:
 - 🧠 Historical performance & wet-weather skill
 - 🌧️ OpenWeatherMap forecast for April 6, 2025 (14:00)
