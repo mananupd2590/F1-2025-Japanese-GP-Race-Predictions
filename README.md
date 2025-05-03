@@ -16,25 +16,10 @@ It accounts for:
 
 ---
 
-## 📊 Predicted Driver Performance
-
-![Predicted Finishing Positions](./assets/japanese_gp_prediction.png)
-
-This chart compares predicted finishing positions across all 20 drivers, color-coded by team.
 
 ---
 
 ## 🧠 How the Model Works
-
-```mermaid
-graph TD
-  A[Historical F1 Data 2022-2024] --> B[Feature Engineering]
-  B --> C[Wet Driver Score (Rain vs Dry Analysis)]
-  B --> D[Weather Forecast (OWM API)]
-  C --> E[Random Forest Model]
-  D --> E
-  E --> F[Final Grid Predictions]
-```
 
 ---
 
