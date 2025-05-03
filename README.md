@@ -2,7 +2,7 @@
 # 🏎️ F1 Japanese Grand Prix 2025 – Race Prediction Model
 
 > A machine-learning–based prediction system for forecasting the **2025 Japanese GP at Suzuka**, combining historical race data, rain-performance metrics, and real-time weather forecasting.
-![PODIUM](https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/EventApp/1396156441)
+![PODIUM](podium.jpeg)
 ---
 
 ## 📌 Project Overview
